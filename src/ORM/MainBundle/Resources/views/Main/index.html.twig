@@ -3,5 +3,11 @@
 {% block title %}{{ parent() }} - Index{% endblock %}
 
 {% block body %}
-    OK, même s'il est pour l'instant un peu vide, mon blog sera trop bien !
+    Person :
+
+    {% if person is not empty %}
+        {% for p in person %}
+           <li> {{ p.name }}</li>
+        {% endfor %}
+    {% endif %}
 {% endblock %}

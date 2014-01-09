@@ -1,0 +1,74 @@
+<?php
+
+namespace ORM\MainBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * GdConfigurations
+ *
+ * @ORM\Table(name="gd_configurations")
+ * @ORM\Entity
+ */
+class GdConfigurations
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="configuration_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $configurationId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="status", type="string", nullable=false)
+     */
+    private $status;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_created", type="datetime", nullable=false)
+     */
+    private $dateCreated;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="last_updated", type="datetime", nullable=false)
+     */
+    private $lastUpdated;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="account_id", type="integer", nullable=false)
+     */
+    private $accountId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="configuration_name", type="string", length=100, nullable=false)
+     */
+    private $configurationName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="content", type="text", nullable=false)
+     */
+    private $content;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_rows_generated", type="integer", nullable=true)
+     */
+    private $numRowsGenerated = '0';
+
+
+}
