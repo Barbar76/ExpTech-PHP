@@ -1,0 +1,35 @@
+ORM\MainBundle\Entity\GdCities:
+    type: entity
+    table: gd_cities
+    id:
+        cityId:
+            type: integer
+            nullable: false
+            unsigned: true
+            comment: ''
+            id: true
+            column: city_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        countrySlug:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: ''
+            column: country_slug
+        regionSlug:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: ''
+            column: region_slug
+        city:
+            type: string
+            nullable: false
+            length: 80
+            fixed: false
+            comment: ''
+    lifecycleCallbacks: {  }

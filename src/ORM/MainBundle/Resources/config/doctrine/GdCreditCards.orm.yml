@@ -1,0 +1,45 @@
+ORM\MainBundle\Entity\GdCreditCards:
+    type: entity
+    table: gd_credit_cards
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        typeCode:
+            type: string
+            nullable: false
+            length: 2
+            fixed: true
+            comment: ''
+            column: type_code
+        type:
+            type: string
+            nullable: false
+            length: 20
+            fixed: false
+            comment: ''
+        prefix:
+            type: string
+            nullable: false
+            length: 6
+            fixed: false
+            comment: ''
+        numberLength:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: number_length
+        weight:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+            comment: ''
+    lifecycleCallbacks: {  }

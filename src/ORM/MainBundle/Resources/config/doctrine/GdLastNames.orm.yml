@@ -1,0 +1,22 @@
+ORM\MainBundle\Entity\GdLastNames:
+    type: entity
+    table: gd_last_names
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        lastName:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: ''
+            default: ''
+            column: last_name
+    lifecycleCallbacks: {  }

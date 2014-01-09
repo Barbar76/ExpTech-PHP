@@ -1,0 +1,47 @@
+GdRegions:
+    type: entity
+    table: gd_regions
+    id:
+        regionId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: region_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        countrySlug:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: ''
+            column: country_slug
+        region:
+            type: string
+            nullable: false
+            length: 35
+            fixed: false
+            comment: ''
+        regionShort:
+            type: string
+            nullable: true
+            length: 2
+            fixed: true
+            comment: ''
+            column: region_short
+        regionSlug:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: ''
+            column: region_slug
+        weight:
+            type: smallint
+            nullable: false
+            unsigned: false
+            comment: ''
+    lifecycleCallbacks: {  }

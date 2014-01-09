@@ -1,0 +1,30 @@
+GdSessions:
+    type: entity
+    table: gd_sessions
+    id:
+        sessionId:
+            type: string
+            nullable: false
+            length: 100
+            fixed: false
+            comment: ''
+            default: ''
+            id: true
+            column: session_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        sessionData:
+            type: text
+            nullable: false
+            length: null
+            fixed: false
+            comment: ''
+            column: session_data
+        expires:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '0'
+    lifecycleCallbacks: {  }
