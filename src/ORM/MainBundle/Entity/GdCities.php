@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="gd_cities")
  * @ORM\Entity
+ * @ORM\Entity(repositoryClass="ORM\MainBundle\Entity\GdCitiesRepository")
  */
 class GdCities
 {

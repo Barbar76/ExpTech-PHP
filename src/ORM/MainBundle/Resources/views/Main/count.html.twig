@@ -1,0 +1,24 @@
+{% extends "ORMMainBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Information{% endblock %}
+
+{% block body %}
+
+    {% if person is not empty %}
+        <div class="text-primary text-info text-center">
+            <i class="glyphicon glyphicon-info-sign">Information</i>
+            <br>
+            <br>
+            Personnes dans la BDD : {{ person }}
+            <br>
+            Adresses dans la BDD : {{ address }}
+            <br>
+            Villes dans la BDD : {{ cities }}
+            <br>
+            Pays dans la BDD : {{ countries }}
+            <br>
+            Regions dans la BDD : {{ regions }}
+        </div>
+    {% endif %}
+
+{% endblock %}

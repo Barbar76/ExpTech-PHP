@@ -1,3 +1,11 @@
 orm_main_homepage:
     pattern:  /
     defaults: { _controller: ORMMainBundle:Main:index }
+
+orm_get_bydate:
+    pattern:  /getbydate
+    defaults: { _controller: ORMMainBundle:Main:getbydate }
+
+orm_count:
+    pattern:  /count
+    defaults: { _controller: ORMMainBundle:Main:count }
